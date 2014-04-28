@@ -20,11 +20,10 @@ module.exports.render = render;
  */
 
 function render (el, ctx, prop, scope, next) {
-  var self = this
-    , Oz = this.constructor;
+  var self = this;
 
-  Oz.propSplit(prop, this.separator, this.equals, function (name, val) {
-    val = val != null ? Oz.get(ctx, val, self.thisSymbol) : null;
+  this.split(prop, function (name, val) {
+    val = val != null ? self.get(ctx, val) : null;
 
     if(attr(el).get(name) !== val) attr(el).set(name, val);
   });
