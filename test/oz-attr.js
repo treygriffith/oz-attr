@@ -1,7 +1,10 @@
 
 var Oz = require('oz');
+var attrTag = require('oz-attr');
 var assert = require('assert');
 var children = require('children');
+
+Oz.use(attrTag);
 
 describe('Rendering', function(){
 

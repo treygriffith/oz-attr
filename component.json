@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "description": "Attribute tags for Oz",
   "dependencies": {
-    "matthewp/attr": "*",
+    "matthewp/attr": "*"
   },
   "development": {
     "treygriffith/oz": "^0.1.0",
     "ramitos/children": "*",
-    "component/assert": "*",
+    "component/assert": "*"
   },
   "scripts": [
     "index.js"
