@@ -1,12 +1,12 @@
 {
   "name": "oz-attr",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Attribute tags for Oz",
   "dependencies": {
     "matthewp/attr": "*"
   },
   "development": {
-    "treygriffith/oz": "^0.1.0",
+    "treygriffith/oz": "^0.2.0",
     "ramitos/children": "*",
     "component/assert": "*"
   },

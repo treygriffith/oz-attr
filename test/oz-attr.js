@@ -9,12 +9,12 @@ Oz.use(attrTag);
 describe('Rendering', function(){
 
   it('should set attributes without changing context', function(){
-    var el = children(Oz.render('<div oz-attr="class:name"><p oz-text="text"></p></div>', { name: 'Tobi', text: 'something'}));
+    var el = children(Oz.render('<div oz-attr-class="name"><p oz-text="text"></p></div>', { name: 'Tobi', text: 'something'}));
     assert('Tobi' == el[0].className);
   });
 
-  it('should render multiple attributes in one tag', function(){
-    var el = children(Oz.render('<div oz-attr="class:name;data-active:active"></div>', { name: 'Tobi', active: true})); 
+  it('should render multiple attributes in one element', function(){
+    var el = children(Oz.render('<div oz-attr-class="name" oz-attr-data-active="active"></div>', { name: 'Tobi', active: true})); 
     assert('Tobi' == el[0].className);
     assert('true' == el[0].getAttribute('data-active'));
   });
@@ -23,8 +23,8 @@ describe('Rendering', function(){
 
 describe("Updating", function() {
 
-  it('should update multiple attributes in one tag', function(){
-    var template = Oz('<div oz-attr="class:name;data-active:active"></div>');
+  it('should update multiple attributes in one element', function(){
+    var template = Oz('<div oz-attr-class="name" oz-attr-data-active="active"></div>');
     var el = children(template.render({ name: 'Tobi', active: true}));
     assert('Tobi' == el[0].className);
     assert('true' == el[0].getAttribute('data-active'));
